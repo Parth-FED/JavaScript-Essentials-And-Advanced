@@ -1,0 +1,104 @@
+// Function to calculate subtotal price
+function calculateSubtotalPrice(price, quantity) {
+  return price * quantity;
+}
+
+// Example usage
+var price = 10; // Replace with the actual price per item
+var quantity = 5; // Replace with the actual quantity
+var subtotal = calculateSubtotalPrice(price, quantity);
+
+console.log('Subtotal:', subtotal);
+/////////////////////////////////////////////////
+
+In JavaScript, there are several methods for outputting information to the user. The most common methods include:
+1...} console.log(): This method is used to log information to the console. It is often used for debugging purposes.
+--> console.log('Hello, World!');
+2...} alert(): This method displays a dialog box with a specified message and an OK button. It's commonly used for simple user notifications.
+--> alert('Hello, World!');
+3...} document.write(): This method writes HTML expressions or JavaScript code to a document. However, it's not commonly used due to potential issues with document overwrites and
+script execution.
+-->  document.write('Hello, World!');
+4...} innerHTML: This property allows you to get or set the HTML content within an element. It's often used to dynamically update the content of a webpage.
+---> document.getElementById('exampleElement').innerHTML = 'Hello, World!';
+5...} prompt(): This method displays a dialog box that prompts the user for input. It returns the text entered by the user.
+---> var userInput = prompt('Enter your name:');
+     console.log('User entered:', userInput);
+
+These methods serve different purposes, and the choice of which one to use depends on the context and the specific requirements of your application. console.log() is commonly used for 
+debugging, while alert() and document.write() are more visible to end-users. The use of innerHTML and other DOM manipulation methods is prevalent when working with dynamic web content. 
+The prompt() method is used for getting user input.
+
+
+
+////////////////////////////////////////////////
+1. Using console.log() with an Event Listener:
+
+<!-- HTML button element to trigger the event -->
+<button id="consoleLogButton">Click me for console log</button>
+
+<script>
+  // Function to log a message to the console
+  function logToConsole() {
+    console.log('Hello, World!');
+  }
+
+  // Attach an event listener to the button
+  document.getElementById('consoleLogButton').addEventListener('click', logToConsole);
+</script>
+
+
+2. Using alert() with an Event Listener:
+
+<!-- HTML button element to trigger the event -->
+<button id="alertButton">Click me for alert</button>
+
+<script>
+  // Function to display an alert box
+  function showAlert() {
+    alert('Hello, World!');
+  }
+
+  // Attach an event listener to the button
+  document.getElementById('alertButton').addEventListener('click', showAlert);
+</script>
+
+
+3. Using document.write() is not recommended for events, as it can cause issues.
+
+4. Using innerHTML with an Event Listener:
+
+<!-- HTML button element to trigger the event -->
+<button id="innerHTMLButton">Click me for innerHTML</button>
+
+<!-- HTML element to update -->
+<div id="outputElement"></div>
+
+<script>
+  // Function to update the content of an HTML element
+  function updateInnerHTML() {
+    document.getElementById('outputElement').innerHTML = 'Hello, World!';
+  }
+
+  // Attach an event listener to the button
+  document.getElementById('innerHTMLButton').addEventListener('click', updateInnerHTML);
+</script>
+
+
+5. Using prompt() with an Event Listener:
+
+<!-- HTML button element to trigger the event -->
+<button id="promptButton">Click me for prompt</button>
+
+<script>
+  // Function to prompt the user for input
+  function promptUser() {
+    var userInput = prompt('Enter your name:');
+    console.log('User entered:', userInput);
+  }
+
+  // Attach an event listener to the button
+  document.getElementById('promptButton').addEventListener('click', promptUser);
+</script>
+
+
